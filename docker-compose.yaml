@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  bot:
+      build: .
+      networks:
+        - project-network
+      restart: always
+      environment:
+        TELEGRAM_TOKEN: ""
+networks:
+  project-network:
+    driver: bridge
